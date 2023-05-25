@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="OneArray.cpp" />
     <ClCompile Include="Practice05.cpp" />
   </ItemGroup>
   <ItemGroup>
