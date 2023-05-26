@@ -27,14 +27,6 @@ OneArray::OneArray(int n)
 		a[i] = 0;
 }
 
-void OneArray::copy(const OneArray& other) 
-{
-	for (int i = 0; i < n; i++) 
-	{
-		this->a[i] = other.a[i];
-	}
-}
-
 OneArray::OneArray(int n, int m)
 {
 	if (n == 0)

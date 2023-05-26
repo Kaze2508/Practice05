@@ -13,7 +13,6 @@ public:
 	OneArray();
 	OneArray(int);
 	OneArray(int, int);
-	void copy(const OneArray&);
 	OneArray(const OneArray&);
 	int GetCount();
 	int* GetA();
