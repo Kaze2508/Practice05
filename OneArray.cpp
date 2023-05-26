@@ -1,10 +1,38 @@
 #include "OneArray.h"
+
 OneArray::~OneArray()
 {
 	n = 0;
 	delete[]a;
 	a = NULL;
 	std::cout << "Cleared one array\n";
+}
+
+OneArray::OneArray()
+{
+	n = 0;
+	a = NULL;
+}
+
+OneArray::OneArray(int n)
+{
+	while (n <= 0)
+	{
+		std::cout << "Re-input n > 0: ";
+		std::cin >> n;
+	}
+	this->n = n;
+	a = new int[this->n];
+	for (int i = 0; i < this->n; i++)
+		a[i] = 0;
+}
+
+void OneArray::copy(const OneArray& other) 
+{
+	for (int i = 0; i < n; i++) 
+	{
+		this->a[i] = other.a[i];
+	}
 }
 
 OneArray::OneArray(int n, int m)

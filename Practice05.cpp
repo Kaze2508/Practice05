@@ -3,7 +3,7 @@
 
 int main(int argc, char* argv[])
 {
-    OneArray* m1 = new OneArray, m2(5), m3(3, 7);
+    OneArray *m1 = new OneArray, m2(5), m3(3, 7);
     std::cout << "Array 1: " << *m1 << "\nArray 2: " << m2 << "\nArray 3: " << m3 << std::endl;
     std::cout << "Re - input array 1: \n";
     std::cin >> *m1;
