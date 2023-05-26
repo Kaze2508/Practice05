@@ -102,3 +102,22 @@ OneArray& OneArray::operator=(const OneArray& m)
 		a[i] = m.a[i];
 	return *this;
 }
+
+bool OneArray::prime(int x)
+{
+	if (x < 2)
+	{
+		return false;
+	}
+	else
+	{
+		for (int i = 2; i <= sqrt((float)x); i++)
+		{
+			if (x % i == 0)
+			{
+				return false;
+			}
+		}
+	}
+	return true;
+}

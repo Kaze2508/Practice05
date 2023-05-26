@@ -7,10 +7,12 @@ int main(int argc, char* argv[])
     std::cout << "Array 1: " << *m1 << "\nArray 2: " << m2 << "\nArray 3: " << m3 << std::endl;
     std::cout << "Re - input array 1: \n";
     std::cin >> *m1;
+    std::cout<<m1->GetCount()<<std::endl;
     std::cout << "Array 1: " << *m1 << std::endl;
 
     OneArray m4(*m1), m5, m6, m7;
     m5 = m6 = *m1;
+    std::cout << m3.GetCount()<<std::endl;
 
     std::cout << "Array 4: " << m4 << std::endl;
     std::cout << "Array 5: " << m5 << std::endl;

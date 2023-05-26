@@ -19,5 +19,6 @@ public:
 	friend std::istream& operator>>(std::istream&, OneArray&);
 	friend std::ostream& operator<<(std::ostream&, const OneArray&);
 	OneArray& operator=(const OneArray&);
+	bool prime(int);
 };
 #endif
