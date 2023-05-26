@@ -127,10 +127,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Money.cpp" />
     <ClCompile Include="OneArray.cpp" />
     <ClCompile Include="Practice05.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Money.h" />
     <ClInclude Include="OneArray.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
