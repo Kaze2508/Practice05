@@ -1,5 +1,8 @@
 #include <iostream>
 #include "OneArray.h"
+#include <fstream>
+#include <cstdlib>
+#include <ctime>
 
 int main(int argc, char* argv[])
 {
