@@ -8,7 +8,7 @@ private:
     int** p;
 public:
     Matrix();
-    Matrix(int d, int c);
+    Matrix(int row, int column);
     Matrix(const Matrix& mt);
     ~Matrix();
     void input();
@@ -17,4 +17,8 @@ public:
     void listPrime();
     bool perfet(int n);
     int count_perfet();
+    int sumPerfect(int k);
+    bool Sym(int n);
+    double mediumSym(int k);
+    void sortK(int k);
 };

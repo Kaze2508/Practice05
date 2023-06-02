@@ -3,31 +3,31 @@
 
 Matrix::Matrix() 
 {
-    sd = 0;
-    sc = 0;
+    row = 0;
+    column = 0;
     p = nullptr;
 }
 
-Matrix::Matrix(int d, int c)
+Matrix::Matrix(int row, int column)
 {
-    sd = d;
-    sc = c;
-    p = new int* [sd];
-    for (int i = 0; i < sd; i++) 
+    row = row;
+    column = column;
+    p = new int* [row];
+    for (int i = 0; i < row; i++) 
     {
-        p[i] = new int[sc];
+        p[i] = new int[column];
     }
 }
 
 Matrix::Matrix(const Matrix& mt) 
 {
-    sd = mt.sd;
-    sc = mt.sc;
-    p = new int* [sd];
-    for (int i = 0; i < sd; i++) 
+    row = mt.row;
+    column = mt.column;
+    p = new int* [row];
+    for (int i = 0; i < row; i++) 
     {
-        p[i] = new int[sc];
-        for (int j = 0; j < sc; j++) 
+        p[i] = new int[column];
+        for (int j = 0; j < column; j++) 
         {
             p[i][j] = mt.p[i][j];
         }
@@ -36,7 +36,7 @@ Matrix::Matrix(const Matrix& mt)
 
 Matrix::~Matrix() 
 {
-    for (int i = 0; i < sd; i++) 
+    for (int i = 0; i < row; i++) 
     {
         delete[] p[i];
     }
@@ -113,13 +113,65 @@ bool Matrix::perfet(int n)
 
 int Matrix::count_perfet() 
 {
-    int dem = 0;
+    int count = 0;
     for (int i = 0; i < row; i++) 
     {
         for (int j = 0; j < column; j++) 
         {
-            if (perfet(p[i][j])) dem++;
+            if (perfet(p[i][j])) count++;
         }
     }
-    return dem;
+    return count;
+}
+
+int Matrix::sumPerfect(int k) 
+{
+    int sum = 0;
+    for (int j = 0; j < column; j++) 
+    {
+        if (perfet(p[k][j])) sum += p[k][j];
+    }
+    return sum;
+}
+
+bool Matrix::Sym(int n) 
+{
+    int m = n;
+    int inverse = 0;
+    while (m > 0) {
+        inverse = inverse * 10 + m % 10;
+        m /= 10;
+    }
+    return inverse == n;
+}
+
+double Matrix::mediumSym(int k) 
+{
+    double sum = 0;
+    int count = 0;
+    for (int i = 0; i < row; i++) 
+    {
+        if (Sym(p[i][k])) 
+        {
+            sum += p[i][k];
+            count++;
+        }
+    }
+    return count == 0 ? 0 : sum / count;
+}
+
+void Matrix::sortK(int k) 
+{
+    for (int i = 0; i < column - 1; i++) 
+    {
+        for (int j = i + 1; j < column; j++) 
+        {
+            if (p[k][i] > p[k][j]) 
+            {
+                int temp = p[k][i];
+                p[k][i] = p[k][j];
+                p[k][j] = temp;
+            }
+        }
+    }
 }
