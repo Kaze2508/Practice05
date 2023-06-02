@@ -127,11 +127,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Matrix.cpp" />
     <ClCompile Include="Money.cpp" />
     <ClCompile Include="OneArray.cpp" />
     <ClCompile Include="Practice05.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Matrix.h" />
     <ClInclude Include="Money.h" />
     <ClInclude Include="OneArray.h" />
   </ItemGroup>
