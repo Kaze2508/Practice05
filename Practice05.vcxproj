@@ -131,11 +131,13 @@
     <ClCompile Include="Money.cpp" />
     <ClCompile Include="OneArray.cpp" />
     <ClCompile Include="Practice05.cpp" />
+    <ClCompile Include="SquareMatrix.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Matrix.h" />
     <ClInclude Include="Money.h" />
     <ClInclude Include="OneArray.h" />
+    <ClInclude Include="SquareMatrix.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

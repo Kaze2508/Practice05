@@ -1,5 +1,7 @@
 #include <iostream>
 #include "OneArray.h"
+#include "Matrix.h"
+#include "SquareMatrix.h"
 #include <fstream>
 #include <cstdlib>
 #include <ctime>
