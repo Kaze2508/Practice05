@@ -4,7 +4,7 @@
 class Matrix 
 {
 private:
-    int sd, sc;
+    int row, column;
     int** p;
 public:
     Matrix();
